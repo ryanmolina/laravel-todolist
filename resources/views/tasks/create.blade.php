@@ -5,6 +5,9 @@
 <h1>Add a New Tasks</h1>
 <p class="lead">Add to your task list below.</p>
 
+@include('common.errors')
+@include('common.flash')
+
 <form method="POST" action="{{ route('tasks.store') }}">
     {{ csrf_field() }}
     <div class="form-group">
